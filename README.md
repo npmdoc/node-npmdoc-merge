@@ -1,9 +1,14 @@
-# api documentation for  [merge (v1.2.0)](https://github.com/yeikos/js.merge)  [![npm package](https://img.shields.io/npm/v/npmdoc-merge.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-merge) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-merge.svg)](https://travis-ci.org/npmdoc/node-npmdoc-merge)
+# npmdoc-merge
+
+#### api documentation for  [merge (v1.2.0)](https://github.com/yeikos/js.merge)  [![npm package](https://img.shields.io/npm/v/npmdoc-merge.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-merge) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-merge.svg)](https://travis-ci.org/npmdoc/node-npmdoc-merge)
+
 #### Merge multiple objects into one, optionally creating a new cloned object. Similar to the jQuery.extend but more flexible. Works in Node.js and the browser.
 
-[![NPM](https://nodei.co/npm/merge.png?downloads=true)](https://www.npmjs.com/package/merge)
+[![NPM](https://nodei.co/npm/merge.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/merge)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-merge/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-merge_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-merge/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-merge/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-merge/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-merge/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-merge/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-merge/build/screenCapture.npmPackageListing.svg)
 
@@ -45,13 +50,11 @@
     "main": "merge.js",
     "maintainers": [
         {
-            "name": "yeikos",
-            "email": "yeikos@gmail.com"
+            "name": "yeikos"
         }
     ],
     "name": "merge",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/yeikos/js.merge.git"
@@ -61,100 +64,6 @@
     },
     "version": "1.2.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module merge](#apidoc.module.merge)
-1.  [function <span class="apidocSignatureSpan">merge.</span>clone (input)](#apidoc.element.merge.clone)
-1.  [function <span class="apidocSignatureSpan">merge.</span>recursive (clone)](#apidoc.element.merge.recursive)
-
-
-
-# <a name="apidoc.module.merge"></a>[module merge](#apidoc.module.merge)
-
-#### <a name="apidoc.element.merge.clone"></a>[function <span class="apidocSignatureSpan">merge.</span>clone (input)](#apidoc.element.merge.clone)
-- description and source-code
-```javascript
-clone = function (input) {
-
-		var output = input,
-			type = typeOf(input),
-			index, size;
-
-		if (type === 'array') {
-
-			output = [];
-			size = input.length;
-
-			for (index=0;index<size;++index)
-
-				output[index] = Public.clone(input[index]);
-
-		} else if (type === 'object') {
-
-			output = {};
-
-			for (index in input)
-
-				output[index] = Public.clone(input[index]);
-
-		}
-
-		return output;
-
-	}
-```
-- example usage
-```shell
-...
-		if (type === 'array') {
-
-			output = [];
-			size = input.length;
-
-			for (index=0;index<size;++index)
-
-				output[index] = Public.clone(input[index]);
-
-		} else if (type === 'object') {
-
-			output = {};
-
-			for (index in input)
-...
-```
-
-#### <a name="apidoc.element.merge.recursive"></a>[function <span class="apidocSignatureSpan">merge.</span>recursive (clone)](#apidoc.element.merge.recursive)
-- description and source-code
-```javascript
-recursive = function (clone) {
-
-		return merge(clone === true, true, arguments);
-
-	}
-```
-- example usage
-```shell
-...
-original = { x: { y: 1 } };
-cloned = merge(true, original);
-cloned.x.y++;
-
-console.log(original.x.y, cloned.x.y);
-// -> 1, 2
-
-console.log(merge.recursive(true, original, { x: { z: 2 } }));
-// -> {"x": { "y": 1, "z": 2 } }
-
-'''
-
-## Browser Usage
-
-'''html
-...
 ```
 
 
