@@ -1,6 +1,6 @@
 # npmdoc-merge
 
-#### api documentation for  [merge (v1.2.0)](https://github.com/yeikos/js.merge)  [![npm package](https://img.shields.io/npm/v/npmdoc-merge.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-merge) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-merge.svg)](https://travis-ci.org/npmdoc/node-npmdoc-merge)
+#### basic api documentation for  [merge (v1.2.0)](https://github.com/yeikos/js.merge)  [![npm package](https://img.shields.io/npm/v/npmdoc-merge.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-merge) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-merge.svg)](https://travis-ci.org/npmdoc/node-npmdoc-merge)
 
 #### Merge multiple objects into one, optionally creating a new cloned object. Similar to the jQuery.extend but more flexible. Works in Node.js and the browser.
 
@@ -62,7 +62,8 @@
     "scripts": {
         "test": "cd tests; node index.js"
     },
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "bin": {}
 }
 ```
 
